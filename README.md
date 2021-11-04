@@ -13,7 +13,7 @@ redoing cve_2020 repository
 - column AC: earliest patch across all 16 sites.
 - lastly, if dirty (column N) = 1 and has_patch (column M) = 0, this means we scraped for that CVE_id but no patch was found for that CVE.
 
-### domains scraped: 16
+## domains scraped: 16
 - we only scraped domains which are mentioned more than 300 times in references:
 - ['gentoo_opensuse_rustsec', #this is 3 sites
  - 'oracle',
@@ -31,7 +31,7 @@ redoing cve_2020 repository
  - 'fedoraproject']
 
 
-### below states the progression from file _1 to _16:
+## below states the progression from file _1 to _16:
 
 - cve_2020_final_1.feather
 Pius' edition, which includes "security.gentoo.org/glsa", "lists.opensuse.org/opensuse-security-announce/", "packetstormsecurity.com/files"
@@ -46,7 +46,7 @@ renamed first_patch to gentoo_opensuse_rustsec
 added dirtybit
 renamed num_patches to has_patch
 
--cve_2020_final_3.feather
+- cve_2020_final_3.feather
 scraped oracle where domain = 'www.oracle.com/security-alerts/cpu'
 added patch date in new column 'oracle'
 updated dirtybit for all scrape attempts on above domain
