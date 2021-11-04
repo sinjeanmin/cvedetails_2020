@@ -7,7 +7,7 @@ redoing cve_2020 repository
 - at the end of all the scrapes, i.e. cve_2020_final_16.feather, i added an additional "earliest_patch" column which lists down the earliest patch date across the 16 sites -that are scraped. i also ensured that has_patch is correctly reflected.
 
 ## important columns and what they mean:
-- column M: 0 if no patch exists, Positive integer otherwise. (Important: Take all positive integers as "a patch exists". E.g. if the has_count is 7 for a row, it does not mean 7 patches are released. Just take it as a patch is released. Due to the many sites we scraped, we noticed not all vendors list down how many patches they released (as well as other factors))
+- column M: 0 if no patch exists, Positive integer otherwise. (Important: Take all positive integers as "a patch exists". E.g. if the has_count is 7 for a row, it does not mean 7 patches are released. Just take it as a patch is released. Due to the many sites we scraped, we noticed not all vendors list down how many patches they released, or if a patch released across 10 Linux versions should be considered 10 releases, and some vendors update newer patch releases in their software directly with no installation)
 - column N: 1 if a scrape has been attempted (even if patch does not exist), 0 if there was no scrape attempt (which also means the site i scraped did not have these CVEs - likely they are small
 - columns O - AB: if date exists, means there was a patch from that site.
 - column AC: earliest patch across all 16 sites.
