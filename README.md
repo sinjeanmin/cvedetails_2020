@@ -86,7 +86,7 @@ scraped bugzilla_redhat where domain = 'bugzilla.redhat.com/show_bug'
 added patch date in new column 'bugzilla_redhat '
 updated dirtybit for all scrape attempts on above domain
 
--cve_2020_final_11.feather
+- cve_2020_final_11.feather
 merged Pius' microsoft where domain = "portal.msrc.microsoft.com/en-US/security-guidance/advisory/"
 added patch date in new column 'microsoft'
 updated dirtybit for all scrape attempts on above domain
