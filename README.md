@@ -8,7 +8,7 @@ redoing cve_2020 repository
 
 ## important columns and what they mean:
 - column M: 0 if no patch exists, Positive integer otherwise. (Important: Take all positive integers as "a patch exists". E.g. if the has_count is 7 for a row, it does not mean 7 patches are released. Just take it as a patch is released. Due to the many sites we scraped, we noticed not all vendors list down how many patches they released, or if a patch released across 10 Linux versions should be considered 10 releases, and some vendors update newer patch releases in their software directly with no installation)
-- column N: 1 if a scrape has been attempted (even if patch does not exist), 0 if there was no scrape attempt (which also means the site i scraped did not have these CVEs - likely they are small
+- column N: 1 if a scrape has been attempted (even if patch does not exist), 0 if there was no scrape attempt (which also means the site i scraped did not have these CVEs)
 - columns O - AB: if date exists, means there was a patch from that site.
 - column AC: earliest patch across all 16 sites.
 - lastly, if dirty (column N) = 1 and has_patch (column M) = 0, this means we scraped for that CVE_id but no patch was found for that CVE.
