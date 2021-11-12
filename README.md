@@ -12,6 +12,7 @@ redoing cve_2020 repository
 - columns O - AB: if date exists, means there was a patch.
 - column AC: earliest patch across all 16 sites.
 - if dirty (column N) = 1 and has_patch (column M) = 0, this means we scraped for that CVE_id but no patch was found for that CVE.
+- isProject - 1 if 'project' is in vendor, 0 otherwise (i.e. not a project and likely to be company)
 
 ## response_time_dummy_1:
 - value 0 is grouped with negatives
