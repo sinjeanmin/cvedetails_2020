@@ -11,7 +11,30 @@ redoing cve_2020 repository
 - column N: 1 if a scrape has been attempted (even if patch does not exist), 0 if there was no scrape attempt (which also means the site i scraped did not have these CVEs)
 - columns O - AB: if date exists, means there was a patch.
 - column AC: earliest patch across all 16 sites.
-- lastly, if dirty (column N) = 1 and has_patch (column M) = 0, this means we scraped for that CVE_id but no patch was found for that CVE.
+- if dirty (column N) = 1 and has_patch (column M) = 0, this means we scraped for that CVE_id but no patch was found for that CVE.
+
+## response_time_dummy_1:
+- value 0 is grouped with negatives
+- 1 means response time range from 1 to max
+- 0 means response time range from min to 0
+
+## response_time_dummy_2:
+- value 0 is grouped with positives
+- 1 means response time range from 0 to max
+- 0 means response time range from min to -1
+
+
+## response_time_categorical_1:
+- value 0 is grouped with negatives
+- 3 means response time range from 10 to max
+- 2 means response time range from 1 to 9
+- 1 means response time range from min to 0
+
+## response_time_categorical_2:
+- value 0 is grouped with positives
+- 3 means response time range from 10 to max
+- 2 means response time range from 0 to 9
+- 1 means response time range from min to -1
 
 ## domains scraped: 16
 - we only scraped domains which are mentioned more than 300 times in references:
